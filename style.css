@@ -42,12 +42,13 @@ html {
     overflow-y: scroll;
     overflow-x: hidden;
     scroll-snap-type: y mandatory;
+    position: absolute;
 }
 
 #to-the-top {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 40px;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -58,6 +59,7 @@ html {
     justify-content: center;
     align-items: center;
     border: var(--senary-color) solid 2px;
+    transition: all 0.3s ease-in-out;
 }
 
 #to-the-top::before {
@@ -65,6 +67,11 @@ html {
     font-size: 40px;
     padding-bottom: 10px;
     color: var(--senary-color);
+}
+
+#to-the-top:hover {
+    border-width: 5px;
+    transform: rotate(360deg);
 }
 
 header {
@@ -112,8 +119,8 @@ h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     text-transform: uppercase;
-    position: relative;
-    top: 45%;
+    position: absolute;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: inline-block;
@@ -127,8 +134,9 @@ h1 {
     color: var(--primary-color);
     z-index: 5;
     font-size: 250px;
-    position: relative;
-    top: -18%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-20deg);
     display: inline-block;
@@ -341,13 +349,26 @@ footer h2 {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.6s;
+    transition: transform 1.2s cubic-bezier(.175, .885, .32, 1.275);
     transform-style: preserve-3d;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
+    animation: card-zoom 1.2s cubic-bezier(.175, .885, .32, 1.275);
+}
+
+@keyframes card-zoom {
+    0% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.1;
+    }
+    100% {
+        scale: 1;
+    }
 }
 
 .flip-card-front,
@@ -357,7 +378,7 @@ footer h2 {
     height: 100%;
     padding: 5px;
     backface-visibility: hidden;
-    border-radius: 18px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -368,10 +389,15 @@ footer h2 {
 .flip-card-front {
     background-color: var(--senary-color);
     color: black;
+    transform: translateZ(20px);
 }
 
 .flip-card-back {
     background-color: var(--septenary-color);
     color: black;
     transform: rotateY(180deg);
+}
+
+/* Media queries pour ecran < 2560px et ecran > 1440*/
+@media screen and (min-width: 1440px) and (max-width: 2560px) {
 }
