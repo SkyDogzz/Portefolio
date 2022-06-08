@@ -47,10 +47,10 @@ html {
 
 #to-the-top {
     position: fixed;
-    bottom: 20px;
-    right: 40px;
-    width: 60px;
-    height: 60px;
+    bottom: 5vh;
+    right: 5vh;
+    width: 8vh;
+    height: 8vh;
     border-radius: 50%;
     background-color: var(--quinary-color);
     z-index: 9999;
@@ -64,8 +64,8 @@ html {
 
 #to-the-top::before {
     content: '▲';
-    font-size: 40px;
-    padding-bottom: 10px;
+    font-size: 3.5vh;
+    padding-bottom: 1vh;
     color: var(--senary-color);
 }
 
@@ -363,9 +363,11 @@ footer h2 {
     0% {
         scale: 1;
     }
+
     50% {
         scale: 1.1;
     }
+
     100% {
         scale: 1;
     }
@@ -398,6 +400,128 @@ footer h2 {
     transform: rotateY(180deg);
 }
 
-/* Media queries pour ecran < 2560px et ecran > 1440*/
-@media screen and (min-width: 1440px) and (max-width: 2560px) {
+/* Media queries between 1746px and 1536px */
+@media screen and (min-width: 1536px) and (max-width: 1746px) {
+    #skills img {
+        width: 400px;
+    }
+
+    #services-container>div {
+        width: 300px;
+        height: 166px;
+    }
+}
+
+/* Media queries between 1536px and 1280px */
+@media screen and (min-width: 1280px) and (max-width: 1536px) {
+    h1 {
+        font-size: 125px;
+    }
+
+    #h1-shadow {
+        font-size: 175px;
+    }
+
+    #skills img {
+        width: 350px;
+    }
+
+    #services-container>div {
+        width: 300px;
+        height: 166px;
+        font-size: 18px;
+    }
+}
+
+/* Media queries between 1280px and 1100px */
+@media screen and (min-width: 1100px) and (max-width: 1280px) {
+    h1 {
+        font-size: 80px;
+    }
+
+    #h1-shadow {
+        font-size: 120px;
+    }
+
+    h2 {
+        font-size: 60px;
+    }
+
+    #about-container {
+        font-size: 12px;
+    }
+
+    #about-container img {
+        width: 200px;
+    }
+
+    #skills img {
+        width: 300px;
+    }
+
+    .progress-bar {
+        width: 150px;
+        height: 15px;
+        margin: 7.5px 0;
+    }
+
+    #services-container>div {
+        width: 250px;
+        height: 140px;
+        font-size: 14px;
+        margin: 10px;
+    }
+}
+
+/* Media queries < 1100px */
+@media screen and (max-width: 1100px) {
+
+    header {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    #h1-shadow {
+        font-size: 70px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    #about-container {
+        font-size: 10px;
+    }
+
+    #about-container img {
+        width: 150px;
+    }
+
+    #skills img {
+        width: 250px;
+    }
+
+    .progress-bar {
+        width: 100px;
+        height: 10px;
+        margin: 5px 0;
+    }
+
+    #services-container>div {
+        width: 200px;
+        height: 120px;
+        font-size: 12px;
+        margin: 10px;
+    }
+
+    footer h2{
+        padding-top: 40px;
+    }
+
+    #contact-container{
+        margin-bottom: 40px;
+    }
 }
