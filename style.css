@@ -243,7 +243,7 @@ h2 {
     width: 500px;
 }
 
-#portefolio {
+#portfolio {
     background-color: var(--secondary-color);
     display: flex;
     flex-direction: column;
