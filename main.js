@@ -8,6 +8,7 @@ let cv = document.querySelector('.cv');
 
 cv.addEventListener('click', () => {
     let url = window.location.href;
+    url = url.split('#')[0];
     window.open(url + 'img/Cv.png');
 
 });
