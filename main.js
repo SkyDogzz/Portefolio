@@ -4,6 +4,13 @@ let smoothScrollContainer = document.getElementById('smooth-scroll-container');
 let aboutBase = document.querySelectorAll('.about-base');
 let h1Shadow = document.querySelector('#h1-shadow');
 let h1 = document.querySelector('h1');
+let cv = document.querySelector('.cv');
+
+cv.addEventListener('click', () => {
+    let url = window.location.href;
+    window.open(url + 'img/Cv.png');
+
+});
 
 smoothScrollContainer.addEventListener('scroll', function () {
     const scrollTop = smoothScrollContainer.scrollTop;
