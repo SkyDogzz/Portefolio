@@ -241,6 +241,12 @@ h2 {
 
 #skills img {
     width: 500px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+#skills img:hover {
+    transform: scale(1.02);
 }
 
 #portfolio {
@@ -517,11 +523,11 @@ footer h2 {
         margin: 10px;
     }
 
-    footer h2{
+    footer h2 {
         padding-top: 40px;
     }
 
-    #contact-container{
+    #contact-container {
         margin-bottom: 40px;
     }
 }
